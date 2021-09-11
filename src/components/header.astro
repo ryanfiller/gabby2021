@@ -1,0 +1,29 @@
+---
+const { title } = Astro.props;
+---
+
+<style>
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: min(100%, 68ch);
+  }
+</style>
+  
+<header>
+  <nav>
+    <a href="/">Home</a>
+    <ul>
+      <li>
+        <a href="/work">Work</a>
+      </li>
+      <li>
+        <a href="/personal">Personal</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+    </ul>
+  </nav>
+</header>
