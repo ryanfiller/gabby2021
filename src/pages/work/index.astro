@@ -1,7 +1,15 @@
 ---
 import PageLayout from '../../layouts/page.astro'
+
+import WorkGrid from '../../components/work-grid.astro';
+
+import { sortByDates } from '../../helpers/index.js'
+
+const pages = Astro.fetchContent('.//*.md').sort((a, b) => sortByDates(a, b));
 ---
 
 <PageLayout title="About">
     work index page
+
+    <WorkGrid items={pages} />
 </PageLayout>

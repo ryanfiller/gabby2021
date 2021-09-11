@@ -3,7 +3,12 @@
 
 import PageLayout from '../layouts/page.astro';
 
-const pages = Astro.fetchContent('./**/*.md').sort((a, b) => (new Date(a.date).valueOf() - new Date(b.date).valueOf()));
+import WorkGrid from '../components/work-grid.astro';
+import PersonalGrid from '../components/personal-grid.astro';
+
+import { sortByDates } from '../helpers/index.js'
+
+const pages = Astro.fetchContent('./**/*.md').sort((a, b) => sortByDates(a, b));
 const works = pages.filter(page => page.url.toString().includes('work'));
 const personals = pages.filter(page => page.url.toString().includes('personal'));
 
@@ -20,45 +25,28 @@ const personals = pages.filter(page => page.url.toString().includes('personal'))
 <PageLayout>
 
     <main>
+
         <section>
             <h2>
                 work
             </h2>
 
-            <hr />
+            <WorkGrid items={works} />
 
-            {works.map(work => (
-                <ul>
-                    <li>
-                        <h3>{work.title}</h3>
-                        <a href={work.url}>link</a>
-                    </li>
-                </ul>
-            ))}
+              <a href="/personal">see more personal stuff</a>
+            </section>
 
-            <a href="/work">see more work stuff</a>
-
-        </section>
 
         <section>
             <h2>
-                personal
+                work
             </h2>
 
-            <hr />
+            <PersonalGrid items={personals} />
 
-            {personals.map(personal => (
-                <ul>
-                    <li>
-                        <h3>{personal.title}</h3>
-                        <a href={personal.url}>link</a>
-                    </li>
-                </ul>
-            ))}
+              <a href="/personal">see more personal stuff</a>
+            </section>
 
-            <a href="/personal">see more personal stuff</a>
-
-        </section>
 
     </main>
 </PageLayout>
