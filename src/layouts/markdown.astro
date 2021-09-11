@@ -1,0 +1,17 @@
+---
+const { title } = Astro.props;
+
+import Page from './page.astro';
+---
+
+<style>
+  main {
+    color: lime;
+  }
+</style>
+
+<Page title={title}>
+  <main>
+    <slot />
+  </main>
+</Page>

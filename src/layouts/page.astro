@@ -3,6 +3,9 @@ const { title } = Astro.props;
 
 import Header from '../components/header.astro'
 import Footer from '../components/footer.astro'
+
+const path = Astro.request.url.href;
+const segment = path.split('/').filter(Boolean)[2]?.toLocaleLowerCase() || 'home';
 ---
 
 <html>
@@ -19,9 +22,9 @@ import Footer from '../components/footer.astro'
     <link rel="sitemap" href="/sitemap.xml" />
   </head>
 
-  <body>
+  <body class={segment}>
 
-    <Header title={title} />
+    <Header title={title} segment={segment} />
 
     <slot />
 
