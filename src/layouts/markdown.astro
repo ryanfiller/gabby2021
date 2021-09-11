@@ -4,14 +4,18 @@ const { title } = Astro.props;
 import Page from './page.astro';
 ---
 
-<style>
-  main {
+<style global>
+  .markdown * {
     color: lime;
+  }
+
+  .markdown img {
+    max-width: 100%;
   }
 </style>
 
 <Page title={title}>
-  <main>
+  <main class='markdown'>
     <slot />
   </main>
 </Page>
