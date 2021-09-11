@@ -1,49 +1,64 @@
 ---
-// Component Imports
-import Tour from '../components/Tour.astro';
-// You can import components from any supported Framework here!
+// import Tour from '../components/Tour.astro';
 
+import PageLayout from '../layouts/page.astro';
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let title = 'My Astro Site';
+const pages = Astro.fetchContent('./**/*.md').sort((a, b) => (new Date(a.date).valueOf() - new Date(b.date).valueOf()));
+const works = pages.filter(page => page.url.toString().includes('work'));
+const personals = pages.filter(page => page.url.toString().includes('personal'));
 
-const works = Astro.fetchContent('./work/**/*.md')
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
-
-import PageLayout from '../layouts/page.astro'
 ---
 
-<PageLayout title="Homepage">
+<style>
+    section {
+        border: 5px solid red;
+        margin: 1rem;
+        padding: 1rem;
+    }
+</style>
+    
+<PageLayout>
+
     <main>
-        <!-- <header>
-            <div>
-                <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
-                <h1>Welcome to <a href="https://astro.build/">Astro</a></h1>
-            </div>
-        </header> -->
+        <section>
+            <h2>
+                work
+            </h2>
 
-        <!-- <Tour /> -->
+            <hr />
 
-        {works.map(work => (
-            <div>
-                <h2>{work.title}</h2>
-                <a href={work.url}>link</a>
-            </div>
-        ))}
+            {works.map(work => (
+                <ul>
+                    <li>
+                        <h3>{work.title}</h3>
+                        <a href={work.url}>link</a>
+                    </li>
+                </ul>
+            ))}
 
-        <!--
-            - You can also use imported framework components directly in your markup!
-            -
-            - Note: by default, these components are NOT interactive on the client.
-            - The `:visible` directive tells Astro to make it interactive.
-            -
-            - See https://docs.astro.build/core-concepts/component-hydration/ 
-            -->
+            <a href="/work">see more work stuff</a>
+
+        </section>
+
+        <section>
+            <h2>
+                personal
+            </h2>
+
+            <hr />
+
+            {personals.map(personal => (
+                <ul>
+                    <li>
+                        <h3>{personal.title}</h3>
+                        <a href={personal.url}>link</a>
+                    </li>
+                </ul>
+            ))}
+
+            <a href="/personal">see more personal stuff</a>
+
+        </section>
 
     </main>
 </PageLayout>
