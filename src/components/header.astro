@@ -2,22 +2,55 @@
 const {
   // title,
   segment
-} = Astro.props;
+} = Astro.props
 
 const pages = [
   'work',
   'sketchbook',
   'about'
-];
-
-// const data = Astro.fetchContent('../pages/post/*.md');
+]
 ---
 
 <style>
-  nav {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 10px solid black;
+    padding: 1rem 2rem;
+  }
+
+  a[href='#content'] {
+    width: 100%;
+    text-align: center;
+    color: var(--colorBackground);
+    background: var(--colorPrimary);
+    position: absolute;
+    top: -3rem;
+    font-size: 1rem;
+    padding: .5rem;
+    line-height: 2rem;
+    transition: var(--transition);
+  }
+
+  a[href='#content']:focus {
+    top: 0;
+  }
+
+  .logo {
+    height: 5rem;
+    width: auto;
+  }
+
+  nav ul {
     display: flex;
     gap: 1em;
-    /* max-width: min(100%, 68ch); */
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   .active {
@@ -26,8 +59,11 @@ const pages = [
 </style>
   
 <header>
+  <a href="#content">skip to content</a>
+  <a href="/">
+    <img class="logo" src="/images/logo.svg" alt="gabbywindham logo">
+  </a>
   <nav>
-    <a href="/">Home</a>
     <ul>
       {pages.map(page => (
         <li>
