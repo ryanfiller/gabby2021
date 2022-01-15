@@ -2,13 +2,43 @@
 const {
   items
 } = Astro.props;
+
+const items2 = [
+  ...items, ...items, ...items, ...items, ...items,
+  ...items, ...items, ...items, ...items, ...items,
+]
 ---
 
-{items.map(item => (
-    <ul>
-        <li>
-            <h3>{item.title}</h3>
-            <a href={item.url}>link</a>
-        </li>
-    </ul>
-))}
+{console.log(Object.keys(items[0]))}
+
+<style>
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--spacer);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    background: pink;
+  }
+
+  img {
+    max-width: 100%;
+  }
+</style>
+
+<ul>    
+  {items2.map(item => (
+    <li>
+        <h3>{item.title}</h3>
+        <a href={item.url}>link</a>
+        {item.thumbnail?.src && item.thumbnail?.alt
+          ? <img src={item.thumbnail.src} alt={item.thumbnail.alt} />
+          : null
+        }
+      </li>
+  ))}
+</ul>
