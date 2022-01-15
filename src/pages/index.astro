@@ -13,38 +13,38 @@ const sketchbooks = pages.filter(page => page.url.toString().includes('sketchboo
 ---
 
 <style>
-    section {
-        border: 5px solid red;
-        margin: 1rem;
-        padding: 1rem;
-    }
+  section {
+    border: 5px solid red;
+    margin: 1rem;
+    padding: 1rem;
+  }
 </style>
-    
+      
 <PageLayout>
 
-    <main>
+  <main>
 
-        <section>
-            <h2>
-                work
-            </h2>
+    <section>
+      <h2>
+        work
+      </h2>
 
-            <WorkGrid items={works} />
+      <WorkGrid items={works} />
 
-              <a href="/work">see more work stuff</a>
-            </section>
-
-
-        <section>
-            <h2>
-                sketchbook
-            </h2>
-
-            <SketchbookGrid items={sketchbooks} />
-
-              <a href="/sketchbook">see more sketchbook stuff</a>
-            </section>
+        <a href="/work">see more work stuff</a>
+      </section>
 
 
-    </main>
+    <section>
+      <h2>
+        sketchbook
+      </h2>
+
+      <SketchbookGrid items={sketchbooks} />
+
+        <a href="/sketchbook">see more sketchbook stuff</a>
+      </section>
+
+
+  </main>
 </PageLayout>
