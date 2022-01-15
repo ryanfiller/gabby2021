@@ -1,50 +1,33 @@
 ---
 import PageLayout from '../layouts/page.astro';
 
-import WorkGrid from '../components/work-grid.astro';
-import PersonalGrid from '../components/personal-grid.astro';
+import Grid from '../components/grid.astro';
 
 import { sortByDates } from '../helpers/index.js'
 
 const pages = Astro.fetchContent('./**/*.md').sort((a, b) => sortByDates(a, b));
 const works = pages.filter(page => page.url.toString().includes('work'));
-const personals = pages.filter(page => page.url.toString().includes('personal'));
+const sketchbooks = pages.filter(page => page.url.toString().includes('sketchbook'));
 
 ---
 
 <style>
-    section {
-        border: 5px solid red;
-        margin: 1rem;
-        padding: 1rem;
-    }
+  section {
+    padding: 2.5rem 5rem;
+  }
 </style>
-    
+      
 <PageLayout>
-
-    <main>
-
-        <section>
-            <h2>
-                work
-            </h2>
-
-            <WorkGrid items={works} />
-
-              <a href="/personal">see more personal stuff</a>
-            </section>
-
-
-        <section>
-            <h2>
-                work
-            </h2>
-
-            <PersonalGrid items={personals} />
-
-              <a href="/personal">see more personal stuff</a>
-            </section>
-
-
-    </main>
+  <section>
+    <h2>work</h2>
+    <hr />
+    <Grid items={works} />
+    <a href="/work">see more work stuff</a>
+  </section>
+  <section>
+    <h2>sketchbook</h2>
+    <hr />
+    <Grid items={sketchbooks} />
+    <a href="/sketchbook">see more sketchbook stuff</a>
+  </section>
 </PageLayout>

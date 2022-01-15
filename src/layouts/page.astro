@@ -29,7 +29,9 @@ const segment = path.split('/').filter(Boolean)[2]?.toLocaleLowerCase() || 'home
 
     <Header title={title} segment={segment} />
 
-    <slot />
+    <main id="content">
+      <slot />
+    </main>
 
     <Footer />
 
