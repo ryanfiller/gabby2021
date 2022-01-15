@@ -1,8 +1,7 @@
 ---
 import PageLayout from '../layouts/page.astro';
 
-import WorkGrid from '../components/work-grid.astro';
-import SketchbookGrid from '../components/sketchbook-grid.astro';
+import Grid from '../components/grid.astro';
 
 import { sortByDates } from '../helpers/index.js'
 
@@ -15,8 +14,6 @@ const sketchbooks = pages.filter(page => page.url.toString().includes('sketchboo
 <style>
   section {
     border: 5px solid red;
-    margin: 1rem;
-    padding: 1rem;
   }
 </style>
       
@@ -29,7 +26,7 @@ const sketchbooks = pages.filter(page => page.url.toString().includes('sketchboo
         work
       </h2>
 
-      <WorkGrid items={works} />
+      <Grid items={works} />
 
         <a href="/work">see more work stuff</a>
       </section>
@@ -40,7 +37,7 @@ const sketchbooks = pages.filter(page => page.url.toString().includes('sketchboo
         sketchbook
       </h2>
 
-      <SketchbookGrid items={sketchbooks} />
+      <Grid items={sketchbooks} />
 
         <a href="/sketchbook">see more sketchbook stuff</a>
       </section>
