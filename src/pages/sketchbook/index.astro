@@ -1,7 +1,7 @@
 ---
 import PageLayout from '../../layouts/page.astro'
 
-import PersonalGrid from '../../components/personal-grid.astro';
+import SketchbookGrid from '../../components/sketchbook-grid.astro';
 
 import { sortByDates } from '../../helpers/index.js'
 
@@ -9,7 +9,7 @@ const pages = Astro.fetchContent('.//*.md').sort((a, b) => sortByDates(a, b));
 ---
 
 <PageLayout title="About">
-    personal index page
+    sketchbook index page
 
-    <PersonalGrid items={pages} />
+    <SketchbookGrid items={pages} />
 </PageLayout>
