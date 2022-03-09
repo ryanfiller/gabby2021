@@ -2,14 +2,7 @@
 const {
   items
 } = Astro.props;
-
-const items2 = [
-  ...items, ...items, ...items, ...items, ...items,
-  ...items, ...items, ...items, ...items, ...items,
-]
 ---
-
-{console.log(Object.keys(items[0]))}
 
 <style>
   ul {
@@ -22,19 +15,32 @@ const items2 = [
   }
 
   li {
-    background: pink;
+    aspect-ratio: 95 / 66;
+    background: var(--thumbnailBackground);
+    position: relative;
+  }
+
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   img {
-    max-width: 100%;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
   }
 </style>
 
 <ul>    
-  {items2.map(item => (
-    <li>
-        <h3>{item.title}</h3>
-        <a href={item.url}>link</a>
+  {items.map(item => (
+    <li style={`--thumbnailBackground: ${item.thumbnail?.background || 'red'};`}>
+        <header>
+          <h3>{item.title}</h3>
+          <a href={item.url}>link</a>
+        </header>
         {item.thumbnail?.src && item.thumbnail?.alt
           ? <img src={item.thumbnail.src} alt={item.thumbnail.alt} />
           : null
