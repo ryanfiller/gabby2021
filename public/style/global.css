@@ -8,9 +8,11 @@
   font-size: 1rem;
   --user-font-scale: 1rem - 16px;
   font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
-  --colorBackground: #f9fafb;
-  --colorText: #111827;
-  --spacer: 1rem;
+  --colorLight: #f9fafb;
+  --colorDark: #111827;
+  --colorBackground: var(--colorLight);
+  --colorText: var(--colorDark);
+  --gap: 1rem;
 
   --transition: .2s;
 
@@ -20,8 +22,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --colorBackground: #111827;
-    --colorText: #f9fafb;
+    --colorBackground: var(--colorDark);
+    --colorText: var(--colorLight);
   }
 }
 

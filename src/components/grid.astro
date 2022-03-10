@@ -1,7 +1,16 @@
 ---
-const {
-  items
-} = Astro.props;
+const { items } = Astro.props
+
+import * as wcag from 'wcag-contrast'
+
+function getLabelColor(color) {
+  const score = wcag.hex('#fffff', color).toFixed(1)
+  if (score >= 3.0) {
+    return '--colorLight'
+  } else {
+    return '--colorDark'
+  }
+}
 ---
 
 <style>
@@ -16,14 +25,43 @@ const {
 
   li {
     aspect-ratio: 95 / 66;
-    background: var(--thumbnailBackground);
+    background: var(--thumbnailBackground, transparent);
+    color: var(--thumbnailText, var(--colorDark));
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+
+  li > * {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     position: relative;
   }
 
   header {
+    z-index: 100;
+    opacity: 0;
+    transition: var(--transition);
+    font-weight: bold;
+  }
+
+  a:hover header {
+    opacity: 1;
+  }
+
+  header::after {
+    content: '';
+    background: var(--thumbnailBackground, transparent);
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
+    z-index: -1;
   }
 
   img {
@@ -36,15 +74,14 @@ const {
 
 <ul>    
   {items.map(item => (
-    <li style={`--thumbnailBackground: ${item.thumbnail?.background || 'red'};`}>
-        <header>
-          <h3>{item.title}</h3>
-          <a href={item.url}>link</a>
-        </header>
-        {item.thumbnail?.src && item.thumbnail?.alt
-          ? <img src={item.thumbnail.src} alt={item.thumbnail.alt} />
-          : null
-        }
+    <li style={`--thumbnailBackground: ${item.thumbnail?.background}; --thumbnailText: var(${getLabelColor(item.thumbnail?.background)});`}>
+      <a href={item.url}>
+        <header>{item.title}</header>
+      </a>
+      {item.thumbnail?.src && item.thumbnail?.alt
+        ? <img src={item.thumbnail.src} alt={item.thumbnail.alt} />
+        : null
+      }
       </li>
   ))}
 </ul>

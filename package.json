@@ -10,6 +10,7 @@
     "surge": "npm run build && surge --project dist --domain beta.gabbywindham.com"
   },
   "devDependencies": {
-    "astro": "^0.20.5"
+    "astro": "^0.20.5",
+    "wcag-contrast": "^3.0.0"
   }
 }
