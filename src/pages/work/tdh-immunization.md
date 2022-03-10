@@ -4,7 +4,7 @@ title: Immunization
 client: Tennessee Department of Health
 date: 2019-4-15 
 thumbnail: 
-  src: /images/rover.jpg
+  src: /images/Vaccine/vaccine-thumbnail.png
   alt: the mars rover
   background: '#FFEDED'
 tags:
@@ -17,3 +17,23 @@ tags:
 ## header
 
 ...
+
+## Challenge/Goals
+
+.... 
+
+## Approach
+
+....
+
+## Inspiration 
+
+....
+
+## Strategy 
+
+....
+
+## Solution
+
+.... 
