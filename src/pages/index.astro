@@ -19,15 +19,13 @@ const sketchbooks = pages.filter(page => page.url.toString().includes('sketchboo
       
 <PageLayout>
   <section>
-    <h2>work</h2>
-    <hr />
+    <h2 class="screenreader">work</h2>
     <Grid items={works} />
     <a href="/work">see more work stuff</a>
   </section>
-  <section>
+  <!-- <section>
     <h2>sketchbook</h2>
-    <hr />
     <Grid items={sketchbooks} />
     <a href="/sketchbook">see more sketchbook stuff</a>
-  </section>
+  </section> -->
 </PageLayout>

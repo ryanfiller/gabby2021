@@ -9,7 +9,5 @@ const pages = Astro.fetchContent('./*.md').sort((a, b) => sortByDates(b, a));
 ---
 
 <PageLayout title="About">
-    work index page
-
     <Grid items={pages} />
 </PageLayout>

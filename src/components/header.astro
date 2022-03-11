@@ -29,6 +29,7 @@ const pages = [
     color: var(--colorBackground);
     background: var(--colorPrimary);
     position: absolute;
+    z-index: 1000;
     top: -3rem;
     left: 0;
     right: 0;
@@ -85,6 +86,7 @@ const pages = [
 <header>
   <a href="#content">skip to content</a>
   <a href="/">
+    <h1 class="screenreader">Gabby Windham | {segment}</h1>
     <img class="logo" src="/images/logo.svg" alt="gabbywindham logo">
   </a>
   <nav>
