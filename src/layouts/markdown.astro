@@ -5,12 +5,46 @@ import Page from './page.astro';
 ---
 
 <style global>
-  .markdown * {
-    color: black;
+  .markdown {
+    --half: calc(0.5 * var(--readableMax));
+    --autoHalf: minmax(auto, var(--half));
+    display: grid;
+    grid-template-columns: 1fr var(--autoHalf) var(--autoHalf) 1fr;
+    grid-row-gap: var(--gap);
+    align-items: center;
   }
 
-  .markdown img {
-    max-width: 100%;
+  .markdown * {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  p {
+    padding: 0 var(--gap);
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .full {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .center {
+  }
+
+  .left {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .right {
+    grid-column-start: 3;
+    grid-column-end: 5;
   }
 </style>
 

@@ -27,6 +27,7 @@
 
   /* sizes */
   --gap: 1rem;
+  --readableMax: 55rem;
 
   /* transitions */
   --transition: .2s;
