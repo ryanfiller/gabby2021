@@ -41,3 +41,16 @@ body {
   white-space: nowrap; 
   width: 1px;
 }
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/WorkSans-VariableFont_wght.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/WorkSans-Italic-VariableFont_wght.ttf');
+  font-style: italic;
+  font-display: swap;
+}

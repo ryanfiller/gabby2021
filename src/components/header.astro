@@ -14,6 +14,9 @@ const pages = [
 
 <style>
   header {
+    /* --logo-width: 10rem; */
+    --logo-width: min(10vw, 10rem);
+
     width: 100%;
     display: flex;
     align-items: center;
@@ -44,8 +47,8 @@ const pages = [
   }
 
   .logo {
-    height: 5rem;
-    width: auto;
+    height: auto;
+    width: var(--logo-width);
     position: relative;
     z-index: 2;
   }
@@ -57,26 +60,43 @@ const pages = [
     right: var(--gap);
   }
 
-  nav ul {
+  ul {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
     padding: 0;
     margin: 0;
     list-style: none;
+    background: red;
+    display: grid;
+    grid-template-column:repeat(6, auto);
+    grid-template-rows: auto;
+    grid-auto-flow: column;
+    grid-template-areas: "work sketchbook gap about contact";
   }
 
-  nav ul:after {
+  ul:after {
+    grid-area: gap;
+    width: var(--logo-width);
     content: '';
-    display: block;
-    flex: 1;
-    order: 3;
   }
 
-  nav ul li:nth-child(1) { order: 1; }
-  nav ul li:nth-child(2) { order: 2; }
-  nav ul li:nth-child(3) { order: 4; }
-  nav ul li:nth-child(4) { order: 5; }
+  li[data-segment="work"] {
+    grid-area: work;
+  }
+
+  li[data-segment="sketchbook"] {
+    grid-area: sketchbook;
+  }
+
+  li[data-segment="about"] {
+    grid-area: about;
+  }
+
+  li[data-segment="contact"] {
+    grid-area: contact;
+  }
 
   .active {
     color: pink;
@@ -92,7 +112,7 @@ const pages = [
   <nav>
     <ul>
       {pages.map(page => (
-        <li>
+        <li data-segment={page}>
           <a
             href={`/${page}`}
             class={segment === page && 'active'}
