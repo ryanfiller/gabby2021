@@ -2,6 +2,8 @@
 layout: ../layouts/markdown.astro
 ---
 
+<img src='http://placekitten.com/1200/500' alt='cats' class='full' />
+
 ## this is the h2
 
 ### this is the h3
@@ -12,17 +14,21 @@ layout: ../layouts/markdown.astro
 
 ###### this is the h6
 
+<img src='http://placekitten.com/1000/500' alt='cats' class='full border' />
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sem sapien, varius elementum urna nec, dapibus bibendum nulla. Sed imperdiet consequat luctus. Nulla placerat neque sit amet posuere elementum. Quisque commodo porttitor purus, non aliquet lectus. Mauris auctor semper aliquam. Nulla finibus venenatis arcu ut consectetur. Cras mauris nisi, aliquam in velit ac, dictum elementum quam. Suspendisse laoreet mollis pretium. Quisque placerat pellentesque porta.
 
-*Sed tristique tortor sed lacus semper feugiat. Sed sit amet lacus sed libero pulvinar interdum. Nullam rhoncus non ante ut ultricies. Vestibulum blandit eleifend diam eget maximus. Morbi iaculis dictum arcu vel vehicula. Duis condimentum faucibus blandit. Nullam imperdiet aliquam ipsum vitae suscipit. Nullam malesuada mi sed dignissim dignissim. Ut sed viverra nunc. Nunc tempus imperdiet risus eget porta. Aliquam non nunc vel odio egestas viverra. Cras fringilla aliquam arcu at tincidunt. Cras sit amet posuere risus.*
+<img src='http://placekitten.com/400/400' alt='cats' class='small' />
 
-**Suspendisse pretium elit id dolor consequat, id mattis neque consectetur. Quisque id eros tellus. Fusce ut nunc sem. Donec a malesuada ligula. Quisque a sapien consequat, varius ipsum in, vulputate odio. Nulla lacinia dignissim dui vitae feugiat. Donec at odio tincidunt, tempus lectus quis, aliquam arcu. Suspendisse eget tortor tempor, blandit metus quis, tincidunt arcu.**
+<img src='http://placekitten.com/300/300' alt='cats' class='small left' /> *Sed tristique tortor sed lacus semper feugiat. Sed sit amet lacus sed libero pulvinar interdum. Nullam rhoncus non ante ut ultricies. Vestibulum blandit eleifend diam eget maximus. Morbi iaculis dictum arcu vel vehicula. Duis condimentum faucibus blandit. Nullam imperdiet aliquam ipsum vitae suscipit. Nullam malesuada mi sed dignissim dignissim. Ut sed viverra nunc. Nunc tempus imperdiet risus eget porta. Aliquam non nunc vel odio egestas viverra. Cras fringilla aliquam arcu at tincidunt. Cras sit amet posuere risus.*
 
-<img src='http://placekitten.com/1000/500' alt='cats' class='full' />
+<img src='http://placekitten.com/200/200' alt='cats' class='small right' /> **Suspendisse pretium elit id dolor consequat, id mattis neque consectetur. Quisque id eros tellus. Fusce ut nunc sem. Donec a malesuada ligula. Quisque a sapien consequat, varius ipsum in, vulputate odio. Nulla lacinia dignissim dui vitae feugiat. Donec at odio tincidunt, tempus lectus quis, aliquam arcu. Suspendisse eget tortor tempor, blandit metus quis, tincidunt arcu.**
 
 > Nunc feugiat, nulla ac sodales bibendum, tellus eros hendrerit ex, ut pulvinar libero est sit amet mi. Cras dictum ut leo at congue. Nunc ac pharetra felis. Aliquam ex leo, condimentum quis iaculis vitae, ultrices porttitor diam. Aliquam erat volutpat. In quis ligula dolor. Praesent et eros massa. Aliquam sit amet feugiat turpis, tincidunt congue felis. Aenean sit amet maximus massa. Quisque malesuada lobortis purus. Aenean bibendum porttitor volutpat. Suspendisse ipsum justo, aliquet in imperdiet sed, semper sed metus. Mauris ut varius nunc. Curabitur sapien mauris, ultricies sed egestas at, vehicula eget ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
 <img src='http://placekitten.com/500/500' alt='cats' class='center' />
+
+Nam eleifend, ante non hendrerit dictum, tellus dolor porta sem, eget mollis sem diam a nisi. Donec porta, justo sed vehicula scelerisque, neque libero semper metus, nec porttitor velit neque ac ex. Phasellus at diam massa. Pellentesque commodo efficitur magna pharetra feugiat. Fusce vulputate orci nec nisl placerat interdum. In vitae pellentesque ex, scelerisque porttitor libero. Nulla facilisi. Donec auctor ornare dui nec egestas. Aenean sed lacinia turpis, non posuere enim. Morbi vel iaculis risus, eget malesuada lacus. Donec sapien turpis, rhoncus in mattis ac, cursus vel arcu. Curabitur posuere mi justo, ultricies tempus eros porta at.
 
 Integer facilisis dignissim blandit. Morbi eros tortor, tincidunt et est sed, ultrices efficitur turpis. Integer facilisis pharetra scelerisque. Maecenas tempus imperdiet massa, id faucibus tellus vehicula vitae. Praesent pretium, risus a dapibus ornare, nulla justo vehicula dolor, quis interdum nibh ex sed arcu. Cras quis placerat felis, ullamcorper feugiat mauris. Aliquam vehicula lacinia ante. Donec iaculis, justo vitae auctor vulputate, quam est tempor velit, a aliquam nibh eros non mauris. Quisque mattis, velit a molestie convallis, massa sem ultricies mauris, eu fermentum magna lacus a libero. Duis ullamcorper euismod dui, iaculis dictum dolor. Sed quam purus, maximus vel odio pulvinar, convallis egestas mi. Nam nisl magna, suscipit id lorem sed, efficitur imperdiet nisl. Nunc aliquet, nisi semper eleifend vehicula, mi velit tincidunt diam, nec elementum eros nibh quis elit. Fusce euismod tristique nulla, vitae elementum elit aliquam quis. Maecenas in augue sit amet massa ullamcorper ornare. Ut id tellus id sem auctor laoreet.
 
@@ -31,6 +37,10 @@ Integer facilisis dignissim blandit. Morbi eros tortor, tincidunt et est sed, ul
 <img src='http://placekitten.com/500/500' alt='cats' class='right' />
 
 In commodo nisi ultrices enim venenatis, et pretium dui suscipit. Suspendisse eu placerat nulla, nec mattis urna. Morbi varius, massa sit amet molestie vulputate, mi quam tincidunt odio, vel maximus odio orci a tortor. Etiam lobortis sollicitudin tincidunt. Ut ac euismod neque, et cursus libero. Proin vulputate arcu justo, ut molestie nunc dignissim non. Praesent suscipit risus ac lacus hendrerit, ut tristique quam cursus. Sed nec venenatis odio, at ultricies dolor. In tincidunt at sapien a feugiat. Nulla ac efficitur urna. Sed dapibus risus ullamcorper suscipit sodales. Duis pulvinar tortor at justo auctor, vitae dictum purus faucibus. Morbi dapibus finibus ipsum pretium rutrum. Suspendisse efficitur condimentum lorem, eget luctus lectus consectetur feugiat. Nulla velit ante, semper sit amet lorem vel, hendrerit pretium ex. Donec elit felis, vulputate eget magna eu, euismod laoreet justo.
+
+<img src='http://placekitten.com/500/500' alt='cats' class='left border' />
+
+<img src='http://placekitten.com/500/500' alt='cats' class='right border' />
 
 Fusce non ornare neque. Cras aliquet dapibus lorem, non ultricies risus elementum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer risus neque, placerat sed mollis ut, interdum a nunc. Sed lorem arcu, semper sit amet ligula at, laoreet tristique nibh. Nulla venenatis velit egestas, tincidunt felis eu, ultricies nisi. Duis commodo sit amet nisi et blandit. Duis vulputate sem sed semper aliquam. Quisque gravida orci a elit varius, sit amet viverra mi consectetur. Quisque non ornare metus, quis dapibus massa. Suspendisse facilisis lorem ut leo sagittis, non iaculis massa lacinia. Vestibulum rutrum, nibh sed vestibulum cursus, massa ante volutpat odio, in tempus felis nisi et sem.
 
@@ -51,8 +61,6 @@ Nunc nec consequat velit. Mauris hendrerit tristique felis, imperdiet bibendum t
 Donec porttitor finibus elit id aliquam. Curabitur ut pulvinar enim. Curabitur sit amet neque at nulla facilisis luctus. Etiam pulvinar id quam sed fringilla. Nullam vel eleifend felis. Aliquam non vestibulum massa, ac commodo est. Aenean ut tincidunt leo. Donec pellentesque pretium sodales. Nunc suscipit mollis libero ac rhoncus. Maecenas ac tortor sodales augue tincidunt molestie eu et sem. Suspendisse aliquet consectetur leo, ut sollicitudin lorem lobortis quis. Donec in dolor elit. Praesent at nibh nunc. Mauris ornare felis eget risus iaculis, quis imperdiet tortor ultrices. Ut lacus orci, pretium et laoreet vel, vulputate sit amet ligula.
 
 In nec augue in odio pharetra hendrerit. Vestibulum bibendum orci id erat placerat, nec iaculis nulla imperdiet. Nulla quis magna tellus. Pellentesque sed massa elit. Donec vitae ex in massa lobortis dictum et at nibh. Fusce et rhoncus elit. Curabitur quam leo, vehicula id ullamcorper id, maximus non ligula. Vestibulum nec turpis nulla. Duis lectus dui, viverra convallis vestibulum eget, posuere nec nibh. Cras eget ante at nulla porttitor tristique. Aliquam id semper neque, non semper nunc. Aliquam volutpat massa a diam rutrum iaculis. Nunc sit amet ornare lectus. In tempus nisl nisl, rhoncus aliquet lorem faucibus vel. Sed vitae commodo mauris. Proin facilisis at sapien non tincidunt.
-
-Nam eleifend, ante non hendrerit dictum, tellus dolor porta sem, eget mollis sem diam a nisi. Donec porta, justo sed vehicula scelerisque, neque libero semper metus, nec porttitor velit neque ac ex. Phasellus at diam massa. Pellentesque commodo efficitur magna pharetra feugiat. Fusce vulputate orci nec nisl placerat interdum. In vitae pellentesque ex, scelerisque porttitor libero. Nulla facilisi. Donec auctor ornare dui nec egestas. Aenean sed lacinia turpis, non posuere enim. Morbi vel iaculis risus, eget malesuada lacus. Donec sapien turpis, rhoncus in mattis ac, cursus vel arcu. Curabitur posuere mi justo, ultricies tempus eros porta at.
 
 Nullam luctus quam eros, vel cursus risus dictum at. Curabitur eu sagittis nibh. Maecenas euismod quis leo eu porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam faucibus eu sapien eu sollicitudin. Phasellus nisi leo, interdum sed dictum id, pulvinar id leo. Phasellus sit amet leo velit. Morbi et elit mollis, sagittis tellus et, tincidunt mauris. Maecenas eget gravida tortor, eget fringilla diam. Ut eu vehicula diam. Proin ligula turpis, mollis id gravida eget, scelerisque eget nulla. Vivamus maximus porttitor erat et porta. Ut cursus facilisis tempus. Integer metus est, placerat vel luctus ac, bibendum non risus. Maecenas condimentum laoreet urna ut varius.
 
