@@ -14,9 +14,6 @@ const pages = [
 
 <style>
   header {
-    /* --logo-width: 10rem; */
-    --logo-width: min(10vw, 10rem);
-
     width: 100%;
     display: flex;
     align-items: center;
@@ -47,8 +44,8 @@ const pages = [
   }
 
   .logo {
-    height: auto;
-    width: var(--logo-width);
+    height: 5rem;
+    width: auto;
     position: relative;
     z-index: 2;
   }
@@ -68,34 +65,29 @@ const pages = [
     padding: 0;
     margin: 0;
     list-style: none;
-    background: red;
-    display: grid;
-    grid-template-column:repeat(6, auto);
-    grid-template-rows: auto;
-    grid-auto-flow: column;
-    grid-template-areas: "work sketchbook gap about contact";
   }
 
   ul:after {
-    grid-area: gap;
-    width: var(--logo-width);
     content: '';
+    display: block;
+    flex: 1;
+    order: 3;
   }
 
   li[data-segment="work"] {
-    grid-area: work;
+    order: 1;
   }
 
   li[data-segment="sketchbook"] {
-    grid-area: sketchbook;
+    order: 2;
   }
 
   li[data-segment="about"] {
-    grid-area: about;
+    order: 4;
   }
 
   li[data-segment="contact"] {
-    grid-area: contact;
+    order: 5;
   }
 
   .active {
