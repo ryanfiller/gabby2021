@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "beta": "npm run build && surge --project dist --domain beta.gabbywindham.com",
-    "publish": "git add . && git commit -m date"
+    "publish": "sh publish.sh"
   },
   "devDependencies": {
     "astro": "^0.20.5",
