@@ -6,7 +6,7 @@ date: 2020-1-06
 thumbnail: 
   src: /images/DoggoneBday/BDay-Doggone-Thumbnail.png
   alt: illustration of dog holding a bone
-  background: '#FFEDED'
+  background: '#e72523'
 tags:
   - design
   - print

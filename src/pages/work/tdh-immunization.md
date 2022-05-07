@@ -5,8 +5,8 @@ client: Tennessee Department of Health
 date: 2019-4-15 
 thumbnail: 
   src: /images/Vaccine/vaccine-thumbnail.png
-  alt: the mars rover
-  background: '#FFEDED'
+  alt: a pattern made of the y-shape of antibodies
+  background: '#eeeeee'
 tags:
   - design
   - concept

@@ -5,8 +5,8 @@ client: Tennessee Department of Health
 date: 2019-9-05
 thumbnail: 
   src: /images/WeOwnBigTobacco/TDH-Thumbnail.png
-  alt: magazine page design with woman lit in red and blue light with copy over photo
-  background: '#FFEDED'
+  alt: website mockup with teen boy lit in red and blue light 
+  background: '#031239'
 tags:
   - design
   - campaign

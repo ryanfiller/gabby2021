@@ -6,7 +6,7 @@ date: 2018-12-15
 thumbnail: 
   src: /images/HolidayGift/HG-Cards-Thumbnail.png
   alt: holiday cards laid in a grid on a surface
-  background: '#EDEDED'
+  background: '#d60000'
 tags:
   - design
   - print

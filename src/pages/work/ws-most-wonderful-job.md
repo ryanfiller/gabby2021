@@ -5,7 +5,7 @@ client: Williams Sonoma
 date: 2019-1-15
 thumbnail: 
   src: /images/MostWondefulJob/WS-gif-thumbnail.gif
-  alt: the mars rover
+  alt: gif showing illustrated woman using a sewing machine with snowflakes in background
   background: '#daedec'
 tags:
   - design

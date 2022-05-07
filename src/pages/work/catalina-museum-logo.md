@@ -5,7 +5,7 @@ client: Catalina Museum of Art & History
 date: 2021-8-10
 thumbnail: 
   src: /images/Catalina/Catalinalogo-thumbnail.png
-  alt: the mars rover
+  alt: logo design with wordmark and four icons stacked in a square with the bottom squares cut at an angle
   background: '#FFEDED'
 tags:
   - design

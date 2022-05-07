@@ -6,7 +6,7 @@ date: 2021-9-27
 thumbnail: 
   src: /images/NMAAM/nmaam-thumbnail2.png
   alt: the mars rover
-  background: '#FFEDED'
+  background: '#E54929'
 tags:
   - design
   - dev

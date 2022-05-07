@@ -5,7 +5,7 @@ client: FuelEd
 date: 2022-2-15
 thumbnail: 
   src: /images/FuelEd/ezgif-1-7515692f20.gif
-  alt: the mars rover
+  alt: gif showing two illustrated figures interacting
   background: '#f3efee'
 tags:
   - design

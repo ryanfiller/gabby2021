@@ -5,8 +5,8 @@ client: UofM Herff College of Engineering
 date: 2019-11-11
 thumbnail: 
   src: /images/UofMHerff/Herff-Thumbnail.png
-  alt: the mars rover
-  background: '#FFEDED'
+  alt: abstract letters spelling the words "student diversity, technical expertise, faculty led research, community involvement, herff college of engineering"
+  background: '#aa245d'
 tags:
   - design
   - book
