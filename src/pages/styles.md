@@ -2,6 +2,21 @@
 layout: ../layouts/markdown.astro
 ---
 
+<div style='display: flex; gap: var(--gap);'>
+  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+    <use href="#hand" color='var(--colorPink)'/>
+  </svg>
+  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+    <use href="#rings" color="var(--colorGreen" />
+  </svg>
+  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+    <use href="#triangle" color="var(--colorPink" />
+  </svg>
+  <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+    <use href="#macaroni" color="var(--colorGreen)"/>
+  </svg>
+</div>
+
 <img src='http://placekitten.com/1200/500' alt='cats' class='full' />
 
 ## this is the h2
