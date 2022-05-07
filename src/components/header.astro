@@ -5,10 +5,26 @@ const {
 } = Astro.props
 
 const pages = [
-  'work',
-  'sketchbook',
-  'about',
-  'contact'
+  {
+    name: 'Work',
+    link: '/work',
+    icon: 'rings'
+  },
+  {
+    name: 'Sketchbook',
+    link: '/sketchbook',
+    icon: 'triangle'
+  },
+  {
+    name: 'About',
+    link: '/about',
+    icon: 'macaroni'
+  },
+  {
+    name: 'Contact',
+    link: '/contact',
+    icon: 'rings'
+  }
 ]
 ---
 
@@ -74,24 +90,57 @@ const pages = [
     order: 3;
   }
 
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    content: '';
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    margin-right: .5em;
+  }
+
   li[data-segment="work"] {
+    color: var(--colorGreen);
     order: 1;
   }
 
   li[data-segment="sketchbook"] {
     order: 2;
+    color: var(--colorPink);
   }
 
   li[data-segment="about"] {
+    color: var(--colorGreen);
     order: 4;
   }
 
   li[data-segment="contact"] {
     order: 5;
+    color: var(--colorPink);
   }
 
-  .active {
-    color: pink;
+  span:not(:hover) {
+    color: var(--colorDark);
+  }
+
+  a {
+    color: currentColor;
+    line-height: 0;
+    text-decoration: none;
+  }
+
+  a:hover svg {
+    transform: scale(100000%) rotate(720deg);
+    opacity: 0;
+    transition: 3s;
+  }
+
+  a.active {
+    text-decoration: underline;
   }
 </style>
   
@@ -104,12 +153,15 @@ const pages = [
   <nav>
     <ul>
       {pages.map(page => (
-        <li data-segment={page}>
+        <li data-segment={page.name.toLowerCase()}>
           <a
-            href={`/${page}`}
-            class={segment === page && 'active'}
+            href={`${page.link}` || `/${page.name}`}
+            class={segment === page.name.toLowerCase() && 'active'}
           >
-            {page}
+            <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+              <use href={`#${page.icon}`} />
+            </svg>
+            <span>{page.name}</span>
           </a>
         </li>
       ))}

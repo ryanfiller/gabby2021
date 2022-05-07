@@ -2,10 +2,40 @@
    footer {
     width: 100%;
     margin-top: 5rem;
-    border-bottom: 30px solid #0C3F36;
+    border-bottom: 1.5rem solid var(--colorGreen);
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 7.5rem;
+    margin-bottom: 1rem;
+  }
+
+  svg {
+    margin-bottom: 1rem;
+  }
+
+  .rings {
+    width: 3rem;
+    color: var(--colorGreen);
+  }
+
+  .hand {
+    color: var(--colorPink);
   }
 </style>
 
 <footer>
-  footer
+  <div class='column'>
+    <figure>
+      <svg class='rings' viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+        <use href="#rings" />
+      </svg>
+      <svg class='hand' viewBox="0 0 1.75 1" xmlns="http://www.w3.org/2000/svg">
+        <use href="#hand" />
+      </svg>
+    </figure>
+  </div>
 </footer>
