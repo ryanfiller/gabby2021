@@ -5,20 +5,6 @@ import Page from './page.astro';
 ---
 
 <style global>
-  .markdown {
-    --half: calc(0.5 * var(--readableMax));
-    --autoHalf: minmax(auto, var(--half));
-    display: grid;
-    grid-template-columns: 1fr var(--autoHalf) var(--autoHalf) 1fr;
-    grid-row-gap: var(--gap);
-    align-items: center;
-  }
-
-  .markdown * {
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
-
   .markdown p,
   .markdown h2,
   .markdown h3,
@@ -92,8 +78,6 @@ import Page from './page.astro';
   }
 </style>
 
-<Page title={title}>
-  <main class='markdown'>
-    <slot />
-  </main>
+<Page title={title} mainClass='column markdown'>
+  <slot />
 </Page>

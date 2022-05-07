@@ -1,0 +1,63 @@
+---
+import PageLayout from '../layouts/page.astro'
+---
+
+<style>
+  form {
+    font-size: 1em;
+    padding: var(--gap);
+  }
+
+  .honeypot {
+    opacity: 0;
+    position: absolute;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 1em;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 10em;
+  }
+
+  button {
+    padding: 1em;
+    cursor: pointer;
+  }
+</style>
+
+<PageLayout title='Contact'>
+  <form class='column' action="https://www.formingo.co/submit/97b7126c-7bf6-4564-8dc4-2e1bef5cd8d9" method="POST">
+
+    <input
+      class="honeypot"
+      pattern="^(?![\s\S])"
+      placeholder="if you're not a bot don't fill this out"
+      tabindex="-1"
+    />
+
+    <input
+      type='text'
+      name='name'
+      placeholder='name'
+    />
+    <input
+      type='email'
+      name='__replyto'
+      placeholder='email'
+    />
+
+    <textarea
+      name='message'
+      placeholder='message'
+    />
+
+    <button type='submit'>
+      Submit
+    </button>
+  </form>
+</PageLayout>
