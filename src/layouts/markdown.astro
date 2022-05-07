@@ -5,12 +5,90 @@ import Page from './page.astro';
 ---
 
 <style global>
+  .markdown {
+    --half: calc(0.5 * var(--readableMax));
+    --autoHalf: minmax(auto, var(--half));
+    display: grid;
+    grid-template-columns: 1fr var(--autoHalf) var(--autoHalf) 1fr;
+    grid-row-gap: var(--gap);
+    align-items: center;
+  }
+
   .markdown * {
-    color: black;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .markdown p,
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6,
+  .markdown blockquote {
+    padding: 0 var(--gap);
   }
 
   .markdown img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .markdown .full {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  .markdown .center {
+  }
+
+  .markdown .left {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .markdown .right {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .markdown .small {
+    width: unset;
     max-width: 100%;
+  }
+
+  .markdown .small.left {
+    float: left;
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
+  }
+
+  .markdown .small.right {
+    float: right;
+    margin-left: var(--gap);
+    margin-bottom: var(--gap);
+  }
+
+  .markdown .border {
+    border-left: calc(2 * var(--gap)) solid var(--colorBackground);
+    border-right: calc(2 * var(--gap)) solid var(--colorBackground);
+  }
+
+  .markdown .border.left {
+    border-right-width: var(--gap); 
+  }
+
+  .markdown .border.right {
+    border-left-width: var(--gap);
+  }
+
+  .markdown blockquote {
+    border-left: var(--gap) solid var(--colorText);
+    padding-left: var(--gap);
+    font-style: italic;
+    font-size: 1.25em;
+    line-height: 1.5;
   }
 </style>
 
