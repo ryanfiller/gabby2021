@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+body > *:is(svg) {
+  display: none;
+}
+
 :root {
   /* fonts */
   /* --fontSansSerif: Work Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; */
@@ -33,7 +37,8 @@
   --transition: .2s;
 
   /* colors */
-  --colorPrimary: purple;
+  --colorPink: #FF8887;
+  --colorGreen: #105142;
 
   --colorLight: #f9fafb;
   --colorDark: #111827;
