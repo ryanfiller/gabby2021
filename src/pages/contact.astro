@@ -8,7 +8,7 @@ import PageLayout from '../layouts/page.astro'
     padding: var(--gap);
   }
 
-  .honeypot {
+  input[name="bot-field"] {
     opacity: 0;
     position: absolute;
   }
@@ -31,10 +31,10 @@ import PageLayout from '../layouts/page.astro'
 </style>
 
 <PageLayout title='Contact'>
-  <form class='column' action="https://www.formingo.co/submit/97b7126c-7bf6-4564-8dc4-2e1bef5cd8d9" method="POST">
+  <form class='column' name="/contact" method="POST" data-netlify="true">
 
     <input
-      class="honeypot"
+      name="bot-field"
       pattern="^(?![\s\S])"
       placeholder="if you're not a bot don't fill this out"
       tabindex="-1"
