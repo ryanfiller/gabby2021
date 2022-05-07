@@ -64,3 +64,19 @@ body {
   white-space: nowrap; 
   width: 1px;
 }
+
+/* utilities */
+
+.column {
+  --half: calc(0.5 * var(--readableMax));
+  --autoHalf: minmax(auto, var(--half));
+  display: grid;
+  grid-template-columns: 1fr var(--autoHalf) var(--autoHalf) 1fr;
+  grid-row-gap: var(--gap);
+  align-items: center;
+}
+
+.column > * {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
