@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "surge": "npm run build && surge --project dist --domain beta.gabbywindham.com"
+    "beta": "npm run build && surge --project dist --domain beta.gabbywindham.com",
+    "publish": "sh publish.sh"
   },
   "devDependencies": {
     "astro": "^0.20.5",
