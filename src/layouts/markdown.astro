@@ -7,14 +7,59 @@ import Page from './page.astro';
 ---
 
 <style global>
-  .markdown p,
+  .markdown {
+    --sideSpace: 3em;
+  }
+
+  .markdown h1,
   .markdown h2,
   .markdown h3,
   .markdown h4,
   .markdown h5,
-  .markdown h6,
-  .markdown blockquote {
+  .markdown h6 {
+    font-variation-settings: 'wght' 325;
+    max-width: calc(0.75 * var(--readableMax));
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 0.5em var(--sideSpace);
+  }
+
+  .markdown h1::after,
+  .markdown h2::after,
+  .markdown h3::after,
+  .markdown h4::after,
+  .markdown h5::after,
+  .markdown h6::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    border-bottom: var(--borderSize) solid var(--colorPink);
+  }
+
+  .markdown h1 {
+    display: flex;
+    justify-content: center;
+    gap: calc(2 * var(--gap));
+    padding: 0.5em calc(var(--gap) + var(--sideSpace)) 0.5em 0;
+  }
+
+  .markdown h1 svg {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    margin: -1em 0;
+    max-width: var(--sideSpace);
+    transform: rotate(30deg);
+    color: var(--colorPink);
+  }
+
+  .markdown p {
     padding: 0 var(--gap);
+    font-variation-settings: 'wght' 275;
+    line-height: 2;
   }
 
   .markdown img {
@@ -72,6 +117,7 @@ import Page from './page.astro';
   }
 
   .markdown blockquote {
+    padding: 0 var(--gap);
     border-left: var(--gap) solid var(--colorText);
     padding-left: var(--gap);
     font-style: italic;
@@ -82,6 +128,9 @@ import Page from './page.astro';
 
 <Page title={title} mainClass='column markdown'>
   <h1>
+    <svg viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+      <use href='#hand' />
+    </svg>
     {title}
   </h1>
   <slot />

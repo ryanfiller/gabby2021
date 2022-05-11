@@ -35,7 +35,7 @@ const pages = [
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid #FF8887;
+    border-bottom: var(--borderSize) solid var(--colorPink);
     padding: var(--gap);
   }
 
@@ -134,6 +134,7 @@ const pages = [
   }
 
   a:hover svg {
+    pointer-events: none;
     transform: scale(100000%) rotate(720deg);
     opacity: 0;
     transition: 3s;
